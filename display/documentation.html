@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OffDrop - Comprehensive Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .doc-link { scroll-behavior: smooth; }
+        code { font-family: 'Courier New', monospace; }
+        .feature-card { transition: all 0.3s ease; }
+        .feature-card:hover { transform: translateY(-4px); }
+        .highlight { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="flex items-center gap-3 hover:text-blue-400 transition">
+                    <div><img src="/logo/OffDrop_logo.png" alt="OffDrop Logo" class="w-8 h-8"></div>
+                    <h1 class="text-xl font-bold">OffDrop</h1>
+                </a>
+                <div class="flex items-center gap-4">
+                    <a href="#toc" class="hover:text-blue-400 transition text-sm">Table of Contents</a>
+                    <a href="/index.html" class="hover:text-blue-400 transition text-sm">← Back</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="border-b border-slate-700/50 py-12 bg-gradient-to-b from-slate-800/50 to-transparent">
+        <div class="max-w-7xl mx-auto px-6">
+            <h1 class="text-5xl font-bold mb-3 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">OffDrop Documentation</h1>
+            <p class="text-xl text-slate-300">Complete technical guide to OffDrop - a secure, offline file distribution platform with AI-powered threat detection</p>
+            <p class="text-sm text-slate-400 mt-2">Version 1.0.0 | Last Updated: May 2026</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <!-- Table of Contents -->
+        <section id="toc" class="mb-16 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-8">
+            <h2 class="text-3xl font-bold mb-6">📖 Table of Contents</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-2">
+                    <a href="#overview" class="block hover:text-blue-400 transition">1. Project Overview</a>
+                    <a href="#why-use" class="block hover:text-blue-400 transition">2. Why Use OffDrop?</a>
+                    <a href="#how-it-works" class="block hover:text-blue-400 transition">3. How It Works</a>
+                    <a href="#connection-modes" class="block hover:text-blue-400 transition">4. Connection Modes</a>
+                    <a href="#features" class="block hover:text-blue-400 transition">5. Core Features</a>
+                </div>
+                <div class="space-y-2">
+                    <a href="#architecture" class="block hover:text-blue-400 transition">6. Architecture</a>
+                    <a href="#installation" class="block hover:text-blue-400 transition">7. Installation & Setup</a>
+                    <a href="#security" class="block hover:text-blue-400 transition">8. Security System</a>
+                    <a href="#ai-detection" class="block hover:text-blue-400 transition">9. AI Threat Detection</a>
+                    <a href="#faq" class="block hover:text-blue-400 transition">10. FAQ</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Overview -->
+        <section id="overview" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-4 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>Project Overview
+                </h2>
+                
+                <div class="space-y-6 text-slate-300">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-400">What is OffDrop?</h3>
+                        <p>OffDrop is a cross-platform, offline file distribution system designed for fast, secure file sharing over local networks. It combines high-speed file transfer capabilities with enterprise-grade AI-powered malware detection to ensure only safe files are distributed across your organization.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-400">Key Capabilities</h3>
+                        <ul class="list-disc list-inside space-y-2 ml-2">
+                            <li>🚀 <strong>High-Speed Transfers:</strong> Direct peer-to-peer file sharing over Wi-Fi without internet</li>
+                            <li>🛡️ <strong>Real-time Threat Detection:</strong> AI-powered malware analysis with 99.5% accuracy</li>
+                            <li>🔐 <strong>Security Token System:</strong> QR code-based access control with IP binding</li>
+                            <li>📱 <strong>Multi-Platform:</strong> Windows, macOS, Linux, Android, and iOS support</li>
+                            <li>🎯 <strong>Universal Analysis:</strong> Detects threats across all file types</li>
+                            <li>📊 <strong>Comprehensive Forensics:</strong> Detailed threat reports with evidence</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-400">Use Cases</h3>
+                        <ul class="list-disc list-inside space-y-2 ml-2">
+                            <li>Enterprise software distribution without internet dependency</li>
+                            <li>Secure file sharing in restricted network environments</li>
+                            <li>Malware quarantine and analysis within isolated networks</li>
+                            <li>Educational institutions for secure file distribution</li>
+                            <li>Government and military networks requiring air-gapped security</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Why Use OffDrop? -->
+        <section id="why-use" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>✨ Why Use OffDrop?
+                </h2>
+                
+                <div class="space-y-6 text-slate-300">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-400">The Problem It Solves</h3>
+                        <p class="mb-4">Traditional file sharing solutions rely on cloud storage and internet connectivity, creating security risks, privacy concerns, and bottlenecks. Organizations need a fast, private, and secure way to share files without uploading to external servers or waiting for internet connections.</p>
+                        <p class="text-cyan-300 font-semibold">OffDrop solves these challenges with local-only file transfer.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-cyan-400 mb-3">🚀 Ultra-Fast Speeds</h4>
+                            <p class="text-sm">Transfer files at gigabit speeds on local WiFi with no internet bottlenecks. Multi-GB files transfer instantly instead of hours.</p>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-cyan-400 mb-3">🔒 Completely Private</h4>
+                            <p class="text-sm">Files stay on your local network and are never uploaded to any external server. All transfers are private and secure.</p>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-cyan-400 mb-3">💾 No File Size Limits</h4>
+                            <p class="text-sm">Transfer multi-GB files instantly without worrying about upload limits. Your only constraint is available disk space.</p>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-cyan-400 mb-3">🌐 No Internet Needed</h4>
+                            <p class="text-sm">Works offline on local WiFi or hotspots. Perfect for restricted networks, air-gapped systems, or areas with no connectivity.</p>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-cyan-400 mb-3">📱 Cross-Platform</h4>
+                            <p class="text-sm">Transfer seamlessly between laptops, phones, tablets, and desktops. Windows, macOS, Linux, iOS, and Android all supported.</p>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-cyan-400 mb-3">✅ No Accounts Required</h4>
+                            <p class="text-sm">No login, registration, or authentication overhead. Simply connect via QR code and start transferring files immediately.</p>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-cyan-400 mb-3">🛡️ AI-Powered Security</h4>
+                            <p class="text-sm">Enterprise-grade threat detection with 99.5% accuracy. Malware, phishing, and suspicious files are automatically quarantined.</p>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                            <h4 class="text-lg font-semibold text-cyan-400 mb-3">🔐 End-to-End Control</h4>
+                            <p class="text-sm">Host your own file hub with complete control. No third-party servers, no dependency on external services, complete data sovereignty.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. How It Works -->
+        <section id="how-it-works" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>🔄 How It Works
+                </h2>
+                
+                <div class="space-y-6 text-slate-300">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">The Concept</h3>
+                        <p class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">OffDrop creates a local network hub where devices can connect and share files. One device acts as the host (server) and other devices connect to it as guests. All communication happens locally without any internet requirement.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Network Requirements</h3>
+                        <ul class="space-y-2 ml-4">
+                            <li class="flex items-start gap-3">
+                                <span class="text-cyan-400 font-bold mt-1">✓</span>
+                                <span><strong>Same WiFi Network:</strong> All devices must be on the same local WiFi network</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-cyan-400 font-bold mt-1">✓</span>
+                                <span><strong>Mobile Hotspot Support:</strong> Devices on a mobile hotspot work too (the phone is the host)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-cyan-400 font-bold mt-1">✓</span>
+                                <span><strong>No Internet Required:</strong> No internet connection needed for transfers (but local network must be active)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-cyan-400 font-bold mt-1">✓</span>
+                                <span><strong>Offline Networks:</strong> Works perfectly on isolated networks not connected to the internet</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Step-by-Step Process</h3>
+                        <div class="space-y-3">
+                            <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                                <p class="font-semibold text-cyan-300 mb-2">Step 1: Start the Host (Device A)</p>
+                                <ul class="text-sm text-slate-300 space-y-1 ml-4">
+                                    <li>• Open OffDrop on your device (this becomes the host)</li>
+                                    <li>• Choose Public Mode or Private Mode</li>
+                                    <li>• A QR code appears on your screen</li>
+                                    <li>• Keep this device running (it's the file hub)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                                <p class="font-semibold text-cyan-300 mb-2">Step 2: Connect Guest Devices (Device B, C, ...)</p>
+                                <ul class="text-sm text-slate-300 space-y-1 ml-4">
+                                    <li>• Open OffDrop on another device on the same WiFi</li>
+                                    <li>• Option A: Scan the QR code shown on the host device</li>
+                                    <li>• Option B: Copy and paste the connection link manually</li>
+                                    <li>• You'll see a confirmation that you're connected</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                                <p class="font-semibold text-cyan-300 mb-2">Step 3: Transfer Files</p>
+                                <ul class="text-sm text-slate-300 space-y-1 ml-4">
+                                    <li>• <strong>Upload:</strong> Go to Transfer tab, select your file, and click Upload</li>
+                                    <li>• <strong>Progress:</strong> See real-time upload speed and percentage</li>
+                                    <li>• <strong>Download:</strong> Other connected devices see your file in File History</li>
+                                    <li>• <strong>Get Files:</strong> Click Download next to any file to save it</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                                <p class="font-semibold text-cyan-300 mb-2">Step 4: Monitor Performance</p>
+                                <ul class="text-sm text-slate-300 space-y-1 ml-4">
+                                    <li>• Go to Performance tab to see connection quality</li>
+                                    <li>• View current speed, last upload speed, and connection analysis</li>
+                                    <li>• Understand your network's transfer capabilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Connection Modes -->
+        <section id="connection-modes" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>🎯 Connection Modes
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Public Mode -->
+                    <div class="bg-gradient-to-br from-slate-700/50 to-slate-800/50 border-2 border-cyan-500/50 rounded-lg p-6 hover:border-cyan-400 transition">
+                        <h3 class="text-xl font-bold mb-4 text-cyan-400 flex items-center gap-2">
+                            <span class="text-2xl">👥</span> Public Mode (Many-to-Many)
+                        </h3>
+                        <div class="space-y-3 text-slate-300">
+                            <div>
+                                <p class="font-semibold text-blue-300 mb-1">Overview</p>
+                                <p class="text-sm">Unlimited devices can connect and all devices can see and download all files.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-blue-300 mb-1">Key Features</p>
+                                <ul class="text-sm space-y-1 ml-4">
+                                    <li>✓ Unlimited device connections</li>
+                                    <li>✓ All devices see all files</li>
+                                    <li>✓ Files shared across all sessions</li>
+                                    <li>✓ Anyone with QR code can join</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-blue-300 mb-1">Best For</p>
+                                <ul class="text-sm space-y-1 ml-4">
+                                    <li>• Group file sharing</li>
+                                    <li>• Office/team collaboration</li>
+                                    <li>• Classroom distribution</li>
+                                    <li>• Conference/event file sharing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Private Mode -->
+                    <div class="bg-gradient-to-br from-slate-700/50 to-slate-800/50 border-2 border-purple-500/50 rounded-lg p-6 hover:border-purple-400 transition">
+                        <h3 class="text-xl font-bold mb-4 text-purple-400 flex items-center gap-2">
+                            <span class="text-2xl">🔒</span> Private Mode (One-to-One)
+                        </h3>
+                        <div class="space-y-3 text-slate-300">
+                            <div>
+                                <p class="font-semibold text-blue-300 mb-1">Overview</p>
+                                <p class="text-sm">Only 2 devices can connect (host + 1 guest) with secure, encrypted transfer.</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-blue-300 mb-1">Key Features</p>
+                                <ul class="text-sm space-y-1 ml-4">
+                                    <li>✓ Exactly 2 devices only</li>
+                                    <li>✓ Secure encrypted link</li>
+                                    <li>✓ Files isolated to pair only</li>
+                                    <li>✓ Unique session tokens</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-blue-300 mb-1">Best For</p>
+                                <ul class="text-sm space-y-1 ml-4">
+                                    <li>• Confidential transfers</li>
+                                    <li>• Personal files</li>
+                                    <li>• Contracts/legal documents</li>
+                                    <li>• Medical/health records</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-700/30 border border-purple-500/30 rounded p-2 mt-3">
+                                <p class="text-xs text-purple-300">💡 Tip: Multiple private sessions can run simultaneously with different pairs. Each pair's files are completely separate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                    <p class="text-sm text-slate-300"><strong>Pro Tip:</strong> Use Private Mode for sensitive transfers (contracts, medical records, personal data). Use Public Mode for collaborative team file sharing where everyone needs access to the same resources.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Features -->
+        <section id="features" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>Core Features
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="feature-card bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                        <h3 class="text-lg font-bold mb-2 text-cyan-400">🎯 AI-Powered Detection</h3>
+                        <p class="text-sm text-slate-300">MicroAI engine analyzing files with 5 forensic features for malware probability calculation</p>
+                    </div>
+
+                    <div class="feature-card bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                        <h3 class="text-lg font-bold mb-2 text-cyan-400">🔐 QR Token Auth</h3>
+                        <p class="text-sm text-slate-300">QR code-based security tokens with IP binding and 10-minute time-to-live</p>
+                    </div>
+
+                    <div class="feature-card bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                        <h3 class="text-lg font-bold mb-2 text-cyan-400">📄 PDF Detection</h3>
+                        <p class="text-sm text-slate-300">Specialized detection for 135+ PDF threat signatures with 99.5% accuracy</p>
+                    </div>
+
+                    <div class="feature-card bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                        <h3 class="text-lg font-bold mb-2 text-cyan-400">🌍 Universal Analysis</h3>
+                        <p class="text-sm text-slate-300">Cross-file-type threat pattern detection for executables, scripts, documents, and more</p>
+                    </div>
+
+                    <div class="feature-card bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                        <h3 class="text-lg font-bold mb-2 text-cyan-400">📋 Forensics Engine</h3>
+                        <p class="text-sm text-slate-300">Entropy calculation, magic number validation, and suspicious pattern matching</p>
+                    </div>
+
+                    <div class="feature-card bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                        <h3 class="text-lg font-bold mb-2 text-cyan-400">🛡️ Access Control</h3>
+                        <p class="text-sm text-slate-300">Origin validation, HTML access prevention, and security headers middleware</p>
+                    </div>
+
+                    <div class="feature-card bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                        <h3 class="text-lg font-bold mb-2 text-cyan-400">📱 Cross-Platform</h3>
+                        <p class="text-sm text-slate-300">Native support for Windows, macOS, Linux, Android, and iOS</p>
+                    </div>
+
+                    <div class="feature-card bg-slate-700/30 border border-slate-600 rounded-lg p-6">
+                        <h3 class="text-lg font-bold mb-2 text-cyan-400">🔒 Quarantine System</h3>
+                        <p class="text-sm text-slate-300">Automatic isolation of suspicious files with detailed analysis reports</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Architecture -->
+        <section id="architecture" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>System Architecture
+                </h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-400">Architecture Overview</h3>
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-6 overflow-x-auto">
+                            <pre class="text-sm text-cyan-300">┌─────────────────────────────────────────────────────────────┐
+│                        Frontend Layer                         │
+│  (Web UI, Desktop Apps, Mobile Clients - Capacitor)          │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+┌─────────────────────────┴────────────────────────────────────┐
+│                    Express.js Backend                         │
+│  • File Upload/Download Management                            │
+│  • Security Token Generation & Validation                     │
+│  • QR Code Generation                                         │
+│  • API Endpoints                                              │
+└─────────────────────────┬────────────────────────────────────┘
+                         │
+┌─────────────────────────┴────────────────────────────────────┐
+│              AI/ML Threat Detection Engine                    │
+│  ├── MicroAI (ai.js) - Probability Calculation                │
+│  ├── Forensics (forensics.js) - Static Analysis               │
+│  ├── Model (model.js) - Report Generation                     │
+│  ├── PDF Detector - Specialized Analysis                      │
+│  └── Universal Analyzer - Cross-file Detection                │
+└─────────────────────────┬────────────────────────────────────┘
+                         │
+┌─────────────────────────┴────────────────────────────────────┐
+│                 File Storage & Quarantine                     │
+│  • uploads/ - Uploaded files                                  │
+│  • uploads/quarantine/ - Suspicious files                     │
+└─────────────────────────────────────────────────────────────┘</pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-400">Backend Components</h3>
+                        <div class="space-y-3">
+                            <div class="bg-slate-700/30 border-l-4 border-blue-400 p-4 rounded">
+                                <p class="font-mono text-cyan-400 text-sm">server.js</p>
+                                <p class="text-sm text-slate-300 mt-1">Express.js application server handling file transfers, authentication, and API endpoints</p>
+                            </div>
+                            <div class="bg-slate-700/30 border-l-4 border-blue-400 p-4 rounded">
+                                <p class="font-mono text-cyan-400 text-sm">Ai-Model/ai.js</p>
+                                <p class="text-sm text-slate-300 mt-1">MicroAI engine calculating malware probability using weighted forensic features</p>
+                            </div>
+                            <div class="bg-slate-700/30 border-l-4 border-blue-400 p-4 rounded">
+                                <p class="font-mono text-cyan-400 text-sm">Ai-Model/forensics.js</p>
+                                <p class="text-sm text-slate-300 mt-1">Static file analysis: entropy, signatures, patterns, imports</p>
+                            </div>
+                            <div class="bg-slate-700/30 border-l-4 border-blue-400 p-4 rounded">
+                                <p class="font-mono text-cyan-400 text-sm">Ai-Model/pdf-advanced-detector.js</p>
+                                <p class="text-sm text-slate-300 mt-1">Specialized PDF threat detection with 135+ signatures</p>
+                            </div>
+                            <div class="bg-slate-700/30 border-l-4 border-blue-400 p-4 rounded">
+                                <p class="font-mono text-cyan-400 text-sm">Ai-Model/universal-threat-analyzer.js</p>
+                                <p class="text-sm text-slate-300 mt-1">Cross-file-type threat pattern matching</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-400">Technology Stack</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-slate-700/30 p-4 rounded">
+                                <p class="font-semibold text-blue-300 mb-2">Backend</p>
+                                <ul class="text-sm text-slate-300 space-y-1">
+                                    <li>• Node.js 18+</li>
+                                    <li>• Express 4.18.4</li>
+                                    <li>• Multer 1.4.5</li>
+                                    <li>• QRCode 1.5.1</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-700/30 p-4 rounded">
+                                <p class="font-semibold text-blue-300 mb-2">Frontend & Deployment</p>
+                                <ul class="text-sm text-slate-300 space-y-1">
+                                    <li>• Electron 7.11.1</li>
+                                    <li>• Capacitor 6.1.2</li>
+                                    <li>• TailwindCSS 4.2.4</li>
+                                    <li>• pkg (Binary Packaging)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Installation -->
+        <section id="installation" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>Installation & Setup
+                </h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">System Requirements</h3>
+                        <ul class="list-disc list-inside space-y-2 text-slate-300 ml-2">
+                            <li><strong>Node.js:</strong> 18.0 or higher</li>
+                            <li><strong>RAM:</strong> Minimum 2GB (4GB recommended)</li>
+                            <li><strong>Disk Space:</strong> 500MB for installation + space for uploads</li>
+                            <li><strong>Network:</strong> Local Wi-Fi network connectivity</li>
+                            <li><strong>OS:</strong> Windows 10+, macOS 10.13+, Linux (Ubuntu 18.04+)</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Development Installation</h3>
+                        <div class="bg-slate-700/50 border border-slate-600 rounded-lg p-4 space-y-3">
+                            <p class="text-sm text-slate-300">1. Download the application</p>
+                            <pre class="bg-slate-800 text-cyan-300 p-3 rounded text-sm overflow-x-auto"><a href="https://github.com/Off-Drop/Off-Drop_Downloads.git"><span class="font-mono border border-slate-600 rounded px-2 py-1">Download</span></a></pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Platform-Specific Installation</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                                <p class="font-semibold text-blue-300 mb-2">Windows</p>
+                                <ol class="list-decimal list-inside space-y-2 text-sm text-slate-300 ml-2">
+                                    <li>Get the latest version from the official <a href="https://github.com/Off-Drop/Off-Drop_Downloads.git"><span class="font-mono border border-slate-600 rounded px-2 py-1">Community</span></a> </li>
+                                    <li>Run Start_application.bat</li>
+                                    <li>Application will launch automatically <a href="/platforms/windows.html"><span class="font-mono border border-slate-600 rounded px-2 py-1">More Info</span></a></li>
+                            </div>
+
+                            <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                                <p class="font-semibold text-blue-300 mb-2">macOS</p>
+                                <ol class="list-decimal list-inside space-y-2 text-sm text-slate-300 ml-2">
+                                    <li>Navigate to Mac_Version directory</li>
+                                    <li>Make startup script executable: chmod +x start_application.command</li>
+                                    <li>Double-click start_application.command</li>
+                                    <li>Grant necessary permissions when prompted <a href="/platforms/macos.html"><span class="font-mono border border-slate-600 rounded px-2 py-1">More Info</span></a></li>
+                                </ol>
+                            </div>
+
+                            <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                                <p class="font-semibold text-blue-300 mb-2">Linux</p>
+                                <ol class="list-decimal list-inside space-y-2 text-sm text-slate-300 ml-2">
+                                    <li>Navigate to Linux_Version directory</li>
+                                    <li>Make startup script executable: chmod +x Start_application.sh</li>
+                                    <li>Run: ./Start_application.sh <a href="/platforms/linux.html"><span class="font-mono border border-slate-600 rounded px-2 py-1">More Info</span></a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Usage -->
+        <section id="usage" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>Usage Guide
+                </h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Basic File Upload</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-slate-300 ml-2">
+                            <li>Launch the OffDrop application</li>
+                            <li>Click the "Upload File" button or drag files into the interface</li>
+                            <li>System automatically analyzes files for threats</li>
+                            <li>View analysis results and threat score</li>
+                            <li>Safe files are available for distribution</li>
+                            <li>Suspicious files are automatically quarantined</li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">QR Code Authentication</h3>
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 space-y-3">
+                            <p class="text-sm text-slate-300">OffDrop uses secure QR code tokens for access control:</p>
+                            <ul class="list-disc list-inside space-y-2 text-sm text-slate-300 ml-2">
+                                <li>Generate unique QR code for each session</li>
+                                <li>QR codes are valid for 10 minutes</li>
+                                <li>Tokens are bound to client IP address</li>
+                                <li>Scan QR code from mobile device or another client</li>
+                                <li>Automatic token validation on file access</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Threat Analysis Workflow</h3>
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 overflow-x-auto">
+                            <pre class="text-xs text-cyan-300">User Uploads File
+       ↓
+System Extracts Forensic Features
+├── File Size Analysis
+├── Entropy Calculation
+├── Header/Magic Byte Validation
+├── Threat Keyword Scanning
+└── Import Table Analysis
+       ↓
+MicroAI Calculates Probability
+       ↓
+Decision:
+├─ Safe: File Added to Distribution
+├─ Suspicious: Moved to Quarantine
+└─ Malicious: Marked as Threat
+       ↓
+Detailed Report Generated
+├── Threat Score
+├── Detection Reasons
+├── File Properties
+└── Recommended Actions</pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">File Distribution</h3>
+                        <ol class="list-decimal list-inside space-y-3 text-slate-300 ml-2">
+                            <li>Upload clean files to OffDrop</li>
+                            <li>Generate secure download links</li>
+                            <li>Share download link or QR code with recipients</li>
+                            <li>Recipients scan QR or enter token</li>
+                            <li>File downloads directly without internet</li>
+                            <li>System logs all downloads for audit trail</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Security -->
+        <section id="security" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>Security System
+                </h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Access Control & Authentication</h3>
+                        <div class="space-y-3">
+                            <div class="bg-slate-700/30 border-l-4 border-green-400 p-4 rounded">
+                                <p class="font-semibold text-green-300 mb-2">QR Code Token System</p>
+                                <ul class="list-disc list-inside space-y-1 text-sm text-slate-300 ml-2">
+                                    <li>Dynamic token generation per session</li>
+                                    <li>IP address binding for token validation</li>
+                                    <li>10-minute time-to-live (TTL) for security</li>
+                                    <li>Cryptographic hash-based token storage</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-slate-700/30 border-l-4 border-green-400 p-4 rounded">
+                                <p class="font-semibold text-green-300 mb-2">Origin Validation</p>
+                                <ul class="list-disc list-inside space-y-1 text-sm text-slate-300 ml-2">
+                                    <li>Referrer header validation</li>
+                                    <li>CORS policy enforcement</li>
+                                    <li>Direct HTML access prevention</li>
+                                    <li>Security headers middleware implementation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Threat Detection Engine</h3>
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 space-y-4">
+                            <p class="text-sm text-slate-300"><strong>5-Feature Forensic Analysis:</strong></p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="bg-slate-800/50 p-3 rounded">
+                                    <p class="font-mono text-cyan-300 text-xs mb-1">File Size</p>
+                                    <p class="text-xs text-slate-400">Detects unusually large/small files indicating packing or manipulation</p>
+                                </div>
+                                <div class="bg-slate-800/50 p-3 rounded">
+                                    <p class="font-mono text-cyan-300 text-xs mb-1">Entropy</p>
+                                    <p class="text-xs text-slate-400">Identifies compression/encryption indicating potential malware</p>
+                                </div>
+                                <div class="bg-slate-800/50 p-3 rounded">
+                                    <p class="font-mono text-cyan-300 text-xs mb-1">Header Signature</p>
+                                    <p class="text-xs text-slate-400">Validates file type against 20+ magic number signatures</p>
+                                </div>
+                                <div class="bg-slate-800/50 p-3 rounded">
+                                    <p class="font-mono text-cyan-300 text-xs mb-1">String Detection</p>
+                                    <p class="text-xs text-slate-400">Pattern matches 100+ threat keywords and dangerous APIs</p>
+                                </div>
+                                <div class="bg-slate-800/50 p-3 rounded col-span-1 md:col-span-2">
+                                    <p class="font-mono text-cyan-300 text-xs mb-1">Import Count (ImpHash)</p>
+                                    <p class="text-xs text-slate-400">Analyzes import tables and suspicious API calls</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Advanced Detection Capabilities</h3>
+                        <ul class="list-disc list-inside space-y-2 text-sm text-slate-300 ml-2">
+                            <li><strong>Ransomware Detection:</strong> High entropy + encryption keywords + C2 patterns</li>
+                            <li><strong>Spyware Detection:</strong> Data exfiltration patterns, screen capture APIs</li>
+                            <li><strong>Trojan Detection:</strong> Remote shell capabilities, backdoor signatures</li>
+                            <li><strong>Botnet Detection:</strong> C2 communication patterns, remote command execution</li>
+                            <li><strong>Worm Detection:</strong> Self-replication and network spread capabilities</li>
+                            <li><strong>PDF Malware:</strong> JavaScript exploits, phishing URLs, embedded malware</li>
+                            <li><strong>Packing Detection:</strong> UPX, Themida, ASPack identifiers</li>
+                            <li><strong>Anti-Analysis Evasion:</strong> Debugger/VM detection code</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Best Practices</h3>
+                        <div class="bg-gradient-to-r from-orange-500/10 to-green-500/10 border border-orange-600/30 rounded-lg p-4 space-y-3">
+                            <ul class="list-disc list-inside space-y-2 text-sm text-slate-300 ml-2">
+                                <li>This is the first version of the applications</li>
+                                <li>Enable firewall and restrict network access</li>
+                                <li>Regularly backup all file data. While OffDrop is built for speed, it is not a long-term storage solution.</li>
+                                <li>We are still opened for feedback and improvements</li>
+                                <li>Review quarantine directory regularly</li>
+                                <li>Monitor system logs for unauthorized access attempts</li>
+                                <li>Regularly use the application's built-in reporting features before downloading any files</li>
+                                <li>Always Update the Application to the latest version</li>
+                                <li>Keep the application updated with the latest security patches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. AI Detection -->
+        <section id="ai-detection" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>AI Threat Detection System
+                </h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">MicroAI Engine</h3>
+                        <p class="text-sm text-slate-300 mb-3">The MicroAI engine is a lightweight machine learning model that calculates malware probability using weighted forensic features.</p>
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 overflow-x-auto">
+                            <p class="font-mono text-cyan-300 text-xs mb-3">Probability Formula:</p>
+                            <pre class="text-xs text-slate-300">malware_probability = w1*fileSize + w2*entropy + w3*signature 
+                        + w4*strings + w5*imports + bias
+Result Range: 0.0 (safe) → 1.0 (malicious)</pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Detection Accuracy</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-4">
+                                <div class="w-20">
+                                    <p class="font-semibold text-cyan-300">PDF Detection</p>
+                                    <p class="text-xs text-slate-400">135+ signatures</p>
+                                </div>
+                                <div class="flex-1 bg-slate-700/50 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-green-400 to-blue-400 h-full" style="width: 99.5%"></div>
+                                </div>
+                                <span class="font-mono text-cyan-300 text-sm">99.5%</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-20">
+                                    <p class="font-semibold text-cyan-300">Universal Files</p>
+                                    <p class="text-xs text-slate-400">All types</p>
+                                </div>
+                                <div class="flex-1 bg-slate-700/50 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-green-400 to-blue-400 h-full" style="width: 96%"></div>
+                                </div>
+                                <span class="font-mono text-cyan-300 text-sm">96%+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Supported File Types</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                            <div class="bg-slate-700/30 p-3 rounded border border-slate-600">
+                                <p class="font-mono text-xs text-cyan-300 mb-1">Executables</p>
+                                <p class="text-xs text-slate-400">.exe, .dll, .msi, .app</p>
+                            </div>
+                            <div class="bg-slate-700/30 p-3 rounded border border-slate-600">
+                                <p class="font-mono text-xs text-cyan-300 mb-1">Documents</p>
+                                <p class="text-xs text-slate-400">.pdf, .doc, .xls, .ppt</p>
+                            </div>
+                            <div class="bg-slate-700/30 p-3 rounded border border-slate-600">
+                                <p class="font-mono text-xs text-cyan-300 mb-1">Scripts</p>
+                                <p class="text-xs text-slate-400">.js, .py, .sh, .bat</p>
+                            </div>
+                            <div class="bg-slate-700/30 p-3 rounded border border-slate-600">
+                                <p class="font-mono text-xs text-cyan-300 mb-1">Archives</p>
+                                <p class="text-xs text-slate-400">.zip, .rar, .7z, .tar</p>
+                            </div>
+                            <div class="bg-slate-700/30 p-3 rounded border border-slate-600">
+                                <p class="font-mono text-xs text-cyan-300 mb-1">Media</p>
+                                <p class="text-xs text-slate-400">.jpg, .png, .mp4, .mp3</p>
+                            </div>
+                            <div class="bg-slate-700/30 p-3 rounded border border-slate-600">
+                                <p class="font-mono text-xs text-cyan-300 mb-1">Web</p>
+                                <p class="text-xs text-slate-400">.html, .css, .xml, .json</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Threat Report Components</h3>
+                        <ul class="list-disc list-inside space-y-2 text-sm text-slate-300 ml-2">
+                            <li><strong>Risk Score:</strong> 0-100 indicating malware likelihood</li>
+                            <li><strong>Detection Details:</strong> Specific threats identified</li>
+                            <li><strong>File Metadata:</strong> Size, timestamps, hashes</li>
+                            <li><strong>Forensic Evidence:</strong> Entropy, signatures matched</li>
+                            <li><strong>Threat Classification:</strong> Type of malware if detected</li>
+                            <li><strong>Recommendations:</strong> Suggested actions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. API Reference -->
+        <section id="api" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>API Reference
+                </h2>
+
+                <div class="space-y-4">
+                    <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                        <p class="font-mono text-cyan-400 text-sm mb-2">POST /api/upload</p>
+                        <p class="text-sm text-slate-300 mb-3">Upload a file for threat analysis</p>
+                        <div class="bg-slate-800/50 p-3 rounded text-xs text-slate-300 space-y-2">
+                            <p><strong>Request:</strong> multipart/form-data with file</p>
+                            <p><strong>Response:</strong> { success, threatScore, analysis, quarantined }</p>
+                            <p><strong>Status Codes:</strong> 200 (success), 400 (invalid), 500 (error)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                        <p class="font-mono text-cyan-400 text-sm mb-2">GET /api/security-token</p>
+                        <p class="text-sm text-slate-300 mb-3">Generate QR code security token</p>
+                        <div class="bg-slate-800/50 p-3 rounded text-xs text-slate-300 space-y-2">
+                            <p><strong>Request:</strong> GET request</p>
+                            <p><strong>Response:</strong> { token, qrCode, expiresIn }</p>
+                            <p><strong>TTL:</strong> 10 minutes</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                        <p class="font-mono text-cyan-400 text-sm mb-2">GET /api/files</p>
+                        <p class="text-sm text-slate-300 mb-3">List available files for download</p>
+                        <div class="bg-slate-800/50 p-3 rounded text-xs text-slate-300 space-y-2">
+                            <p><strong>Query Params:</strong> token (required)</p>
+                            <p><strong>Response:</strong> { files: [{name, size, uploadedAt, threatScore}] }</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                        <p class="font-mono text-cyan-400 text-sm mb-2">GET /api/quarantine</p>
+                        <p class="text-sm text-slate-300 mb-3">List quarantined suspicious files</p>
+                        <div class="bg-slate-800/50 p-3 rounded text-xs text-slate-300 space-y-2">
+                            <p><strong>Query Params:</strong> token (required), admin (optional)</p>
+                            <p><strong>Response:</strong> { quarantined: [{name, threatLevel, reason, timestamp}] }</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                        <p class="font-mono text-cyan-400 text-sm mb-2">POST /api/validate-token</p>
+                        <p class="text-sm text-slate-300 mb-3">Validate security token from QR code</p>
+                        <div class="bg-slate-800/50 p-3 rounded text-xs text-slate-300 space-y-2">
+                            <p><strong>Body:</strong> { qrHash, token }</p>
+                            <p><strong>Response:</strong> { valid, ip, expiresAt }</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                        <p class="font-mono text-cyan-400 text-sm mb-2">GET /api/download/:filename</p>
+                        <p class="text-sm text-slate-300 mb-3">Download a safe file</p>
+                        <div class="bg-slate-800/50 p-3 rounded text-xs text-slate-300 space-y-2">
+                            <p><strong>Query Params:</strong> token (required)</p>
+                            <p><strong>Response:</strong> File stream (binary)</p>
+                            <p><strong>Validation:</strong> Token checked against client IP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+                    
+
+        <!-- 10. Troubleshooting -->
+        <section id="troubleshooting" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>Troubleshooting
+                </h2>
+
+                <div class="space-y-4">
+                    <div class="bg-slate-700/30 border-l-4 border-red-400 p-4 rounded">
+                        <p class="font-semibold text-red-300 mb-2">Application Won't Start</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-slate-300 ml-2">
+                            <li>Verify Node.js 18+ is installed: node --version</li>
+                            <li>Check all dependencies installed: npm install</li>
+                            <li>Verify port 3000 is not in use: netstat -tulpn | grep 3000</li>
+                            <li>Check file permissions on uploads directory</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-700/30 border-l-4 border-red-400 p-4 rounded">
+                        <p class="font-semibold text-red-300 mb-2">Upload Fails with Error</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-slate-300 ml-2">
+                            <li>Check available disk space: df -h</li>
+                            <li>Verify file permissions on uploads folder</li>
+                            <li>Check file size doesn't exceed limit (5GB default)</li>
+                            <li>Look for multer errors in server console</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-700/30 border-l-4 border-red-400 p-4 rounded">
+                        <p class="font-semibold text-red-300 mb-2">QR Code Not Working</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-slate-300 ml-2">
+                            <li>Verify token hasn't expired (10-minute TTL)</li>
+                            <li>Check client IP matches token binding</li>
+                            <li>Ensure both devices on same network</li>
+                            <li>Try generating new QR code</li>
+                            <li>Check QR scanner app compatibility</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-700/30 border-l-4 border-red-400 p-4 rounded">
+                        <p class="font-semibold text-red-300 mb-2">High Memory Usage</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-slate-300 ml-2">
+                            <li>Check for large files in uploads directory</li>
+                            <li>Clear old quarantine files regularly</li>
+                            <li>Monitor forensic analysis on large files</li>
+                            <li>Consider increasing system RAM</li>
+                            <li>Implement file size limits if needed</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-700/30 border-l-4 border-yellow-400 p-4 rounded">
+                        <p class="font-semibold text-yellow-300 mb-2">Files Incorrectly Flagged as Malicious</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-slate-300 ml-2">
+                            <li>Review threat analysis report details</li>
+                            <li>Check specific signatures that triggered alert</li>
+                            <li>Verify file is not packed or obfuscated</li>
+                            <li>Consider whitelisting legitimate files</li>
+                            <li>Compare with external malware scanners (VirusTotal)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-700/30 border-l-4 border-blue-400 p-4 rounded">
+                        <p class="font-semibold text-blue-300 mb-2">Performance Issues</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-slate-300 ml-2">
+                            <li>Analyze large files asynchronously</li>
+                            <li>Implement request rate limiting</li>
+                            <li>Use reverse proxy (nginx) for load balancing</li>
+                            <li>Enable file compression for downloads</li>
+                            <li>Monitor and optimize forensic scanning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. FAQ -->
+        <section id="faq" class="mb-12 scroll-mt-24">
+            <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <span class="highlight w-2 h-8 rounded"></span>Frequently Asked Questions
+                </h2>
+
+                <div class="space-y-4">
+                    <!-- General Questions -->
+                    <div class="border-b border-slate-700 pb-4">
+                        <h3 class="text-lg font-semibold text-blue-400 mb-4">General Questions</h3>
+                        
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">What is OffDrop used for?</summary>
+                                <p class="text-sm text-slate-300 mt-3">OffDrop is a secure offline file distribution platform designed for fast, safe file sharing over local networks. It combines high-speed transfers with AI-powered malware detection, making it ideal for enterprise environments, educational institutions, and scenarios where internet connectivity is unavailable or unreliable.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Does OffDrop require internet connectivity?</summary>
+                                <p class="text-sm text-slate-300 mt-3">No. OffDrop is designed to work completely offline over local Wi-Fi networks. Once installed, it operates independently without requiring any internet connection, making it ideal for air-gapped networks and restricted environments.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">What platforms does OffDrop support?</summary>
+                                <p class="text-sm text-slate-300 mt-3">OffDrop supports Windows (10+), macOS (10.13+), Linux (Ubuntu 18.04+), Android, and iOS. Native applications are available for each platform, providing a consistent experience across devices.</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Feature Questions -->
+                    <div class="border-b border-slate-700 pb-4">
+                        <h3 class="text-lg font-semibold text-blue-400 mb-4">Features & Capabilities</h3>
+                        
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">How accurate is the malware detection?</summary>
+                                <p class="text-sm text-slate-300 mt-3">OffDrop achieves 99.5% accuracy for PDF threat detection with 135+ specialized signatures, and 96%+ accuracy for universal file analysis across all file types. The AI system uses 5 forensic features (file size, entropy, header signatures, string detection, import analysis) to calculate malware probability.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">What types of files can OffDrop analyze?</summary>
+                                <p class="text-sm text-slate-300 mt-3">OffDrop analyzes executables (.exe, .dll, .msi, .app), documents (.pdf, .doc, .xls, .ppt), scripts (.js, .py, .sh, .bat), archives (.zip, .rar, .7z, .tar), media files (.jpg, .png, .mp4, .mp3), and web files (.html, .css, .xml, .json). The universal analyzer works with virtually any file type.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Can OffDrop detect ransomware and spyware?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Yes. OffDrop includes specialized detection for ransomware (high entropy + encryption keywords + C2 patterns), spyware (data exfiltration + screen capture APIs), trojans, botnets, worms, packing techniques (UPX, Themida, ASPack), and anti-analysis evasion code.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">How does the QR code security system work?</summary>
+                                <p class="text-sm text-slate-300 mt-3">OffDrop generates unique QR codes for each session. Each token is IP-bound (tied to the client's IP address) and expires after 10 minutes. The token is cryptographically hashed and validated on every file access, preventing unauthorized downloads and ensuring secure file distribution.</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Installation & Setup Questions -->
+                    <div class="border-b border-slate-700 pb-4">
+                        <h3 class="text-lg font-semibold text-blue-400 mb-4">Installation & Setup</h3>
+                        
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">What are the system requirements?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Minimum requirements: Node.js 18.0+, 2GB RAM, 500MB disk space, and local Wi-Fi connectivity. Recommended: 4GB+ RAM for better performance with large files. Supported OS: Windows 10+, macOS 10.13+, Linux (Ubuntu 18.04+).</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">How do I install OffDrop on my system?</summary>
+                                <p class="text-sm text-slate-300 mt-3">For development: Clone the repo, run 'npm install', then 'npm run dev' (access at http://localhost:3000). For production: Download the platform-specific installer from Windows_Version, Mac_Version, or Linux_Version folder and run the startup script. Each platform has dedicated installation instructions.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Can I run OffDrop on multiple devices simultaneously?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Yes. OffDrop is designed for local network distribution. You can run server instances on one or more devices and have clients on other devices connect via QR codes or security tokens. All connections are local and secure.</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Usage Questions -->
+                    <div class="border-b border-slate-700 pb-4">
+                        <h3 class="text-lg font-semibold text-blue-400 mb-4">Usage & Operation</h3>
+                        
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">How long does threat analysis take?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Analysis time depends on file size and complexity. Small files (< 1MB) typically analyze in milliseconds. Larger files may take seconds to minutes. The system processes files asynchronously to prevent blocking.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">What happens to flagged files?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Suspicious files are automatically moved to the quarantine folder (uploads/quarantine/). They are isolated from the main distribution pool and can be reviewed with detailed threat reports. Administrators can decide whether to delete, whitelist, or further investigate quarantined files.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">How do I share files securely?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Upload clean files to OffDrop, generate a QR code or download link, and share with recipients. They scan the QR code or enter the security token to access files. Each token is time-limited (10 minutes) and IP-bound for maximum security.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Can I access the same files from multiple devices?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Yes. Uploaded files are stored centrally and can be accessed from any device on the same local network with a valid security token. Each device gets its own token, maintaining individual session security.</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Security Questions -->
+                    <div class="border-b border-slate-700 pb-4">
+                        <h3 class="text-lg font-semibold text-blue-400 mb-4">Security & Privacy</h3>
+                        
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Is my data private and secure?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Yes. OffDrop operates entirely on your local network with no cloud storage or external connections. Files are stored locally, security tokens are cryptographically hashed, and all connections are IP-bound. Origin validation and CORS policies prevent unauthorized access.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">How are security tokens protected?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Tokens are generated dynamically per session, cryptographically hashed for storage, bound to client IP addresses, and expire after 10 minutes. QR codes encode token hashes, making them difficult to intercept or reuse.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Can I use OffDrop in a restricted network?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Yes. OffDrop is specifically designed for restricted, air-gapped networks. It requires no internet access and works entirely on local Wi-Fi. This makes it ideal for government, military, and enterprise networks with strict security requirements.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">How do I prevent false positives in threat detection?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Review threat analysis reports for detailed findings. Compare with external scanners (VirusTotal). Check if files are packed or obfuscated. You can whitelist legitimate files. Contact support if detection seems incorrect with evidence of the file's legitimate status.</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- API Questions -->
+                    <div class="border-b border-slate-700 pb-4">
+                        <h3 class="text-lg font-semibold text-blue-400 mb-4">API & Integration</h3>
+                        
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Can I integrate OffDrop with other applications?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Yes. OffDrop exposes REST API endpoints for file upload, token generation, file listing, quarantine management, and downloads. You can build custom integrations, automate workflows, or connect to third-party tools using the documented API.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">What API endpoints are available?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Main endpoints: POST /api/upload (threat analysis), GET /api/security-token (QR generation), GET /api/files (list safe files), GET /api/quarantine (list flagged files), POST /api/validate-token (verify tokens), GET /api/download/:filename (secure download). All endpoints require valid security tokens.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Is there API rate limiting?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Rate limiting can be configured based on your deployment needs. In production, implement rate limiting on upload endpoints to prevent abuse. Current defaults allow reasonable throughput for file distribution but can be customized per installation.</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Troubleshooting Questions -->
+                    <div class="border-b border-slate-700 pb-4">
+                        <h3 class="text-lg font-semibold text-blue-400 mb-4">Troubleshooting</h3>
+                        
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Why won't the application start?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Check if Node.js 18+ is installed. Verify all dependencies with 'npm install'. Ensure port 3000 is available. Check file permissions on the uploads directory. Review error logs in console output. Restart the application and check for specific error messages.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Why are file uploads failing?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Common causes: insufficient disk space, incorrect folder permissions, file exceeds size limit (5GB default), or network issues. Check available disk space with 'df -h'. Verify write permissions on uploads/ folder. Check file size and multer configuration. Ensure network connectivity.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Why is the QR code not working?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Possible issues: token expired (10-minute TTL), client IP doesn't match token binding, devices not on same network, QR scanner incompatibility, or corrupted QR code. Generate a fresh token and try again. Verify both devices are on the same local network.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Why is memory usage so high?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Large file analysis consumes memory during forensic scanning. Check for accumulated files in uploads/ directory. Clear old quarantine files regularly. Process large files asynchronously. Consider increasing system RAM if analyzing very large files frequently.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Why are legitimate files being flagged as malicious?</summary>
+                                <p class="text-sm text-slate-300 mt-3">This can happen with packed, obfuscated, or newly released files that don't match known signatures. Review the threat report for specific triggers. Compare with external scanners. If confident the file is safe, whitelist it or contact support with evidence of legitimacy.</p>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- AI & Detection Questions -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-blue-400 mb-4">AI & Detection</h3>
+                        
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">How does the MicroAI engine work?</summary>
+                                <p class="text-sm text-slate-300 mt-3">MicroAI is a lightweight ML model that calculates malware probability using 5 weighted forensic features: file size, entropy, header signatures, string detection, and import analysis. The formula produces a score from 0.0 (safe) to 1.0 (malicious). Thresholds determine quarantine/allow decisions.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4 mb-3">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">What is entropy and why does OffDrop measure it?</summary>
+                                <p class="text-sm text-slate-300 mt-3">Entropy measures randomness/compression in files. High entropy indicates encryption, compression, or packing—common techniques used by malware to evade detection. By calculating entropy, OffDrop identifies potentially obfuscated or suspicious files.</p>
+                            </details>
+                        </div>
+
+                        <div class="bg-slate-700/30 border border-slate-600 rounded-lg p-4">
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-cyan-300 hover:text-cyan-200 transition">Can OffDrop detect zero-day malware?</summary>
+                                <p class="text-sm text-slate-300 mt-3">OffDrop uses behavioral and forensic analysis rather than signature-based detection alone, making it more effective against unknown malware. However, sophisticated zero-days designed to bypass heuristics may not be caught. OffDrop is best used as part of a layered security approach.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="mt-16 pt-12 border-t border-slate-700">
+            <div class="text-center">
+                <p class="text-slate-400 text-sm mb-4">For more information or support, visit the project repository or drop an email</p>
+                <div class="flex justify-center gap-4">
+                    <a href="https://github.com/Off-Drop/Off-Drop_Downloads.git" class="inline-block w-8 h-8 rounded-full overflow-hidden border border-slate-700">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="w-full h-full object-cover">
+                    </a>
+                    <a href="mailto:support@offdrop.com" target="_blank" class="px-6 py-2 border border-slate-600 hover:border-blue-400 rounded-lg transition text-sm">Support</a>
+                </div>
+            </div>
+            <div class="text-center mt-8 text-slate-500 text-xs">
+                <p>OffDrop © 2026 | Secure Offline File Distribution Platform</p>
+                <p>Documentation Version 1.0.0</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add animation to feature cards on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
